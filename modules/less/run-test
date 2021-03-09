@@ -1,0 +1,10 @@
+#!/bin/bash
+yarn -s rollup -c acceptance.rollup.config.js --silent
+
+diff=`diff dist/style.css test/expected.css`
+
+if [[ -n "$diff" ]]; then
+	>&2 echo "Output in dist/style.css does not match test/expected.css"
+	echo "$diff"
+	exit 1
+fi
