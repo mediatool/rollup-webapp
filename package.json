@@ -1,0 +1,14 @@
+{
+  "name": "rollup-webapp",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
+  "main": "index.js",
+  "workspaces": [
+    "modules/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
