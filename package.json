@@ -9,6 +9,8 @@
     "modules/*"
   ],
   "devDependencies": {
+    "@yafu/eslint-config-yafu": "^1.0.4",
+    "eslint": "^7.22.0",
     "lerna": "^4.0.0"
   }
 }
