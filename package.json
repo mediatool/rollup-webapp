@@ -6,6 +6,8 @@
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "predemo": "yarn prepublishOnly",
+    "demo": "lerna run demo --scope sample",
     "prepublishOnly": "lerna run prepublishOnly --parallel"
   },
   "workspaces": [
