@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ' @yafu/eslint-config-yafu',
+  extends: '@yafu/eslint-config-yafu',
 }
