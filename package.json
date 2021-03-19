@@ -5,6 +5,9 @@
   "license": "MIT",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "lerna run prepublishOnly --parallel"
+  },
   "workspaces": [
     "modules/*"
   ],

@@ -5,7 +5,8 @@
   "module": "lib/plugin.js",
   "license": "MIT",
   "scripts": {
-    "test": "./run-test"
+    "test": "./run-test",
+    "prepublishOnly": "rollup -c"
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
