@@ -8,9 +8,11 @@ export default function plugin ({
 }) {
   return {
     async buildStart () {
+      const soucreMapOptions = sourceMaps ? { sourceMap: {} } : {}
+      const fullOptions = { ...soucreMapOptions, ...lessOptions }
       const promises = lessFiles.map(async ({ input, output }) => {
         const fileContent = await readFile(input, 'utf-8')
-        const { css, map, imports } = await less.render(fileContent, { sourceMap: {}, ...lessOptions })
+        const { css, map, imports } = await less.render(fileContent, fullOptions)
         this.emitFile({
           type: 'asset',
           fileName: output,
@@ -27,6 +29,6 @@ export default function plugin ({
         })
       })
       return Promise.all(promises)
-    }
+    },
   }
 }
