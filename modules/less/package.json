@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "test": "./run-test",
-    "prepublishOnly": "rollup -c"
+    "clean": "rm -rf dist",
+    "transpile": "rollup -c",
+    "prepublishOnly": "yarn clean && yarn transpile"
   },
   "dependencies": {
     "fs-extra": "^9.1.0",

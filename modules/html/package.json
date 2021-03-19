@@ -4,7 +4,9 @@
   "main": "dist/plugin.js",
   "license": "MIT",
   "scripts": {
-    "prepublishOnly": "rollup -c"
+    "clean": "rm -rf dist",
+    "transpile": "rollup -c",
+    "prepublishOnly": "yarn clean && yarn transpile"
   },
   "devDependencies": {
     "rollup": "^2.40.0"

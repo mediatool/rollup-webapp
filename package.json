@@ -8,6 +8,8 @@
   "scripts": {
     "predemo": "yarn prepublishOnly",
     "demo": "lerna run demo --scope sample",
+    "clean": "lerna run clean --parallel",
+    "transpile": "lerna run transpile --parallel",
     "prepublishOnly": "lerna run prepublishOnly --parallel"
   },
   "workspaces": [
